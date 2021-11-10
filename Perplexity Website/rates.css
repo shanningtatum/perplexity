@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:root{
+    --background:rgba(0, 0, 0, 1);
+}
+*,*::before,*::after{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:'Oswald', sans-serif;
+    background-color:#222;
+    font-weight:400;
+}
+
+.logo{
+    height:2em;
+    margin:0;
+}
+
+.content{
+    min-height:100vh;
+    background-image:url(images/gate-kate.png);
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size:cover;
+    font-family:'Arial', sans-serif;
+    padding-top:150px;
+}
+
+/* navigation styles start here */
+
+header{
+    background:var(--background);
+    text-align:center;
+    position:fixed;
+    z-index:999;
+    width:100%;
+}
+
+.nav-toggle{
+    display:none;
+} 
+
+.nav-toggle-label{
+    position:absolute;
+    top:0;
+    left:0;
+    margin-left:1em;
+    height:100%;
+    display:flex;
+    color:white;
+    align-items:center;
+}
+
+.nav-toggle-label{
+    position:absolute;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    display:block;
+    background:white;
+    height:2px;
+    width:2em;
+    border-radius:2px;
+    position:relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content:'';
+    position:absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom:7px;
+}
+.nav-toggle-label span::after{
+    top:7px;
+}
+
+nav{
+    position:absolute;
+    text-align:left;
+    top:100%;
+    left:0;
+    background:var(--background);
+    width:100%;
+    transform:scale(1,0);
+    transform-origin:top;
+    transition:transform 400ms ease-in-out;
+}
+nav ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+nav li {
+    margin-bottom:1em;
+    margin-left:1em;
+}
+
+nav a{
+    font-family:'Bebas Neue', sans-serif;
+    color:white;
+    text-decoration:none;
+    font-size:1.6rem;
+    text-transform:uppercase;
+    opacity:0;
+    transition:opacity 100ms ease-in-out 250ms;
+}
+
+nav a:hover{
+    color:grey;
+}
+
+.nav-toggle:checked ~ nav{
+    display:block;
+    transform:scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity:1;
+    transition:opacity 250ms ease-in-out 250ms;
+}
+
+.nav-booking{
+    font-family:'Bebas Neue', sans-serif;
+    background-color:green;
+    color:white;
+    display:flex;
+    font-size:1.5rem;
+    width:100%;
+    margin:0px;
+    top:0;
+    text-decoration:none;
+    justify-content:center;
+    align-items:center;
+    transition: all 0.3s ease;
+}
+.nav-booking:hover{
+    background-color:rgb(10, 87, 10);
+}
+
+/* drop down menu */
+
+.room-toggle{
+    display:none;
+}
+
+
+.room-toggle:checked ~ .rooms-links{
+    display:block;
+    transform:scale(1,1);
+}
+
+.room-toggle:checked ~ .rooms-links a{
+    opacity:1;
+    transition:opacity 250ms ease-in-out 250ms;
+}
+
+.rooms-links{
+    margin-top:10px;
+    display:none;
+}
+
+.page-title{
+    font-size:3rem;
+    text-align:center;
+    color:#222;
+    margin-top:30px;
+    font-family:'Bebas Neue', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.booking{
+    background-color:#a91f22;
+    display:flex;
+    font-size:1.5rem;
+    width:100px;
+    height:50px;
+    color:white;
+    margin-left:auto;
+    margin-right:auto;
+    text-decoration:none;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
+    transition: all 0.3s ease;
+    box-shadow: 6px 6px 0px -2px rgba(0,0,0,0.75);
+}
+.booking:hover{
+    transition: all 0.2s ease;
+    font-size:1.4rem;
+    background:white;
+    color:black;
+}
+.nav-booking{
+    font-family:'Bebas Neue', sans-serif;
+    background-color:green;
+    color:white;
+    display:flex;
+    font-size:1.5rem;
+    width:100%;
+    margin:0px;
+    top:0;
+    text-decoration:none;
+    justify-content:center;
+    align-items:center;
+    transition: all 0.3s ease;
+}
+.nav-booking:hover{
+    background-color:rgb(10, 87, 10);
+}
+.scroll-top{
+    color:black;
+    position:fixed;
+    width:50px;
+    height:50px;
+    right:30px;
+    bottom:30px;
+    opacity:0.6;
+    z-index:9999;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+.closed{
+    color:#cd2024;
+}
+
+
+/* footer typography */
+
+.footer{
+    font-family:'Oswald',sans-serif;
+    background-color:black;
+    padding:20px;
+    width:100%;
+    margin-top:auto;
+}
+.footer-col{
+    width:25%;
+    list-style:none;
+    padding:0px 15px;
+}
+
+.footer-col h4{
+    position:relative;
+    font-size:18px;
+    text-transform:uppercase;
+    margin-bottom:30px;
+    font-weight:500px;
+}
+.footer-col h4::before{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    background-color:#cd2024;
+    height:2px;
+    box-sizing:border-box;
+    width:50px;
+}
+.footer-col ul li:note(:last-child){
+    margin-bottom:20px;
+}
+.footer-col ul li a{
+    font-size:16px;
+    text-decoration:none;
+    font-weight:300;
+    transition: all 0.3s ease;
+}
+.footer-col ul li {
+    color:white;
+    text-align:left;
+}
+.footer-col ul li a:hover{
+    color:#b3b3b3;
+    padding-left:10px;
+}
+.footer-col li a{ 
+    font-size:16px;
+    color:white; 
+    margin:0.5em;
+    vertical-align:text-bottom;
+    text-decoration:none;
+    font-weight:300;
+    transition: all 0.3s ease;
+}
+.footer-col li{
+    list-style:none;
+    text-align:left;
+    color:white;
+}
+.footer-col li a:hover{
+    color:#b3b3b3;
+    padding-left:20px;
+}
+.footer-col .social-links a{
+    color:white;
+    display:inline-block;
+    width:40px;
+    height:40px;
+    background-color:#cd2024;
+    margin:0 10px 10px 0;
+    text-align:center;
+    line-height:40px;
+    border-radius:50%;
+    transition: all 0.3s ease;
+}
+.footer-col .social-links a:hover {
+    background-color: #a91f22;
+    transition: all 0.3s ease;
+    color:#222;
+}
+
+.copyright{
+    font-family:'Oswald',sans-serif;
+    font-size:0.9rem;
+    display:flex;
+    color:white;
+    text-align:center;
+    padding-top:40px;
+    opacity:0.6;
+    justify-content:center;
+}
+.copyright:after{
+    content:'';
+    position:absolute;
+    left:0;
+    background-color:#222;
+    margin-bottom:50px;
+    height:2px;
+    box-sizing:border-box;
+    width:100%;
+}
+.copyright-text{
+    padding-top:5px;
+}
+.container{
+    color:white;
+    max-width:1170px;
+    margin:auto;
+}
+.row{
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+}
+.fa-sort-down{
+    color:white;
+}
+
+/* rates html typography */
+.rate-content{
+    background-image:url(images/About.png);
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0;
+    max-width:100%;
+}
+.content-table{
+    border-collapse:collapse;
+    width:100%;
+}
+
+.rate-info{
+    display:flex;
+    flex-direction:column;
+    margin-left:auto;
+    margin-right:auto;
+}
+.rate-bram{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    background:white;
+    height:450px;
+    border-radius:20px;
+    margin-bottom:20px;
+    padding-left:20px;
+    padding-right:20px;
+}
+.rate-miss{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    background:white;
+    height:300px;
+    border-radius:20px;
+    margin-bottom:150px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+/* brampton and mississauga missions */
+.rate-info h4{
+    font-family:'Oswald',sans-serif;
+    background:#a91f22;
+    border-radius:50px;
+    font-size:1.5rem;
+    text-align:center;
+    color:white;
+    align-content:center;
+    margin-top:20px;
+    margin-bottom:0px;
+    margin-left:auto;
+    margin-right:auto;
+    text-transform:uppercase;
+}
+/* header for table */
+.rate-info tr th{   
+    color:black;
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+    text-align:left;
+    font-size:1rem;
+}
+
+/* body for brampton mission and missisauga mission */
+.rate-info tr td{
+    color:black;
+    font-family:'Roboto', sans-serif;
+}
+
+.rate-players{
+    text-align:right;
+}
+
+/* price header */
+.rate-info h1{
+    font-family:'Lobster',sans-serif;
+    color:black;
+    text-align:center;
+    margin-bottom:0px;
+}
+/* minutes header */
+.rate-info h2{
+    font-family:'Roboto',sans-serif;
+    font-size:1rem;
+    color:black;
+    text-align:center;
+    margin-top:0px;
+}
+.rate-content{
+    padding-top:20px;
+    padding-left:50px;
+    padding-right:50px;
+    
+}
+
+/* break */
+
+.lines{
+    margin-top:40px;
+    margin-left:auto;
+    margin-right:auto;
+    width:300px;
+    height:45px;
+    position:relative;
+    text-align:center;
+}
+.lines::after, .lines::before{
+    content:'';
+    position:absolute;
+    margin:auto;
+    height:2px;
+    background:#222;
+    width:45%;
+    top:30%;
+}
+.lines::after{
+    left:0
+}
+.lines:before{
+    right:0
+}
+#br-icon{
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+/* break */
+
+@media screen and (min-width:800px){
+    .nav-toggle-label{
+        display:none;
+    }
+
+    header{
+        display:grid;
+        grid-template-columns:1fr auto minmax(600px,3fr) 1fr;
+    }
+
+    .active-page{
+        background:#a91f22;
+        color:black;
+        padding:10px;
+        border-radius:10px;
+        box-sizing:border-box;
+    }
+    .active-page:hover{
+        color:white;
+    }
+
+    nav{
+        all:unset;
+        grid-column:3/4;
+        display:flex;
+        justify-content:flex-end;
+        align-items:center;
+    }
+
+    nav a{
+        opacity:1;
+        justify-content:flex-end;
+        position:relative;
+    }
+
+    nav a:hover::after{
+        transform:scale(1,1);
+    }
+    nav li {
+        margin-left:3em;
+        margin-bottom:0;
+    }
+
+    nav ul{
+        display:flex;
+        justify-content:flex-end;
+    }
+
+    nav li > ul{
+        display:inline;
+        position:absolute;
+    }
+
+    nav ul ul{
+        position:absolute;
+    }
+
+    .room-toggle{
+        display:none;
+    }
+    .rooms{
+        position:relative;
+    }
+    .rooms-links{    /* drop down */
+        background:black;
+        position:absolute;
+        display:none;
+        top:20px;
+    }
+    .rooms-links li{  /* drop down box format */
+        padding:10px;
+        display:list-item;
+        text-align:left;
+        margin-left:0px;
+        width:100%;
+    }
+    .rooms-links li:hover{
+        background:#a91f22;
+    }
+    .rooms-links li a:hover{
+        color:black;
+    }
+    .rooms-links a{
+        display:inline-block;
+        line-height:50px;
+        width:100%;
+    }
+    .rooms:hover > ul{
+        display:flex;
+        flex-direction:column;
+    }
+    .room-toggle-label{
+        display:none;
+    }
+    .rooms-links{
+        padding:0px;
+    }
+    .nav-booking{
+        font-family:'Bebas Neue', sans-serif;
+        background-color:#a91f22;
+        display:flex;
+        font-size:1.5rem;
+        width:100px;
+        height:50px;
+        color:white;
+        margin-left:50px;
+        margin-top:30px;
+        text-decoration:none;
+        justify-content:center;
+        border-radius:10px;
+        align-items:center;
+        transition: all 0.3s ease;
+    }
+    .nav-booking:hover{
+        background:white;
+        color:black;
+    }
+    .scroll-top{
+        color:white;
+        position:fixed;
+        width:50px;
+        height:50px;
+        right:50px;
+        bottom:50px;
+        opacity:0.6;
+    }
+    
+    .scroll-top:hover{
+        opacity:1;
+    }
+
+    /* room rates styling start */ 
+    .content-table{
+        width:300px;
+    }
+    .rate-info{
+        display:flex;
+        flex-direction:row;
+    }
+    .rate-bram{
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        background:white;
+        height:450px;
+        margin-right:20px;
+        border-radius:20px;
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .rate-miss{
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        background:white;
+        height:450px;
+        margin-left:20px;
+        border-radius:20px;
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .content{
+        min-height:100vh;
+        background-repeat:none;
+        font-family:'Arial', sans-serif;
+        display:grid;
+        padding-top:110px;
+    }
+}
+@media(max-width:767px){
+    .footer-col{
+        width:50%;
+        margin-bottom:30px;
+    }
+    
+}
+@media(max-width:574px){
+    .footer-col{
+        width:100%;
+    }
+}
