@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 :root{
     --background:rgba(0, 0, 0, 1);
@@ -335,14 +337,17 @@ nav a:hover{
     transition: all 0.3s ease;
     box-shadow: 6px 6px 0px -2px rgba(0,0,0,0.75);
 }
-
+.nav-contact{
+    display:flex;
+    flex-direction:row;
+}
 .nav-booking{
     font-family:'Bebas Neue', sans-serif;
     background-color:green;
     color:white;
     display:flex;
     font-size:1.5rem;
-    width:100%;
+    width:50%;
     margin:0px;
     top:0;
     text-decoration:none;
@@ -350,7 +355,24 @@ nav a:hover{
     align-items:center;
     transition: all 0.3s ease;
 }
-.nav-booking:hover{
+.nav-call{
+    font-family:'Bebas Neue', sans-serif;
+    background-color:green;
+    color:white;
+    display:flex;
+    font-size:1.5rem;
+    width:50%;
+    margin:0px;
+    top:0;
+    text-decoration:none;
+    justify-content:center;
+    align-items:center;
+    transition: all 0.3s ease;
+}
+.nav-contact i{
+    margin-right:10px;
+}
+.nav-booking:hover, .nav-call:hover{
     background-color:rgb(10, 87, 10);
 }
 .body-booking{
@@ -377,8 +399,11 @@ nav a:hover{
     transition: all 0.3s ease;
 }
 .scroll-top{
-    color:black;
+    background:none;    
+    border:none;
+    color:#cd2024;
     position:fixed;
+    display:none;
     width:50px;
     height:50px;
     right:30px;
@@ -386,6 +411,7 @@ nav a:hover{
     opacity:0.6;
     z-index:9999;
 }
+
 html{
     scroll-behavior:smooth;
 }
@@ -408,7 +434,7 @@ html{
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 65%;
     width: auto;
     margin-top: -22px;
     padding:24px;
@@ -432,34 +458,44 @@ html{
 }
   
 /* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    left:300px;
-    bottom: 200px;
-    text-align: center;
-}
-  
-.text-1{
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    left:180px;
-    bottom: 200px;
-    text-align: center;
-}
+
 .text-2{
     color:white;
     font-size:15px;
     position:absolute;
     text-align:center;
 }
+.more-info{
+    font-family:'Bebas Neue', sans-serif;
+    background-color:#a91f22;
+    display:flex;
+    font-size:1.5rem;
+    width:100px;
+    height:50px;
+    color:white;
+    text-decoration:none;
+    justify-content:center;
+    border-radius:10px;
+    align-items:center;
+    transition: all 0.3s ease;
+}
 .more-info:hover{
     background:white;
     color:black;
+}
+.carousel-container{
+    font-family:'Special Elite', sans-serif;
+    position:absolute;
+    text-align:center;
+    top:165px;
+    margin-left:1rem;
+    width:250px;
+    color:white;
+    font-size:1.2rem;
+}
+.boldNum{
+    color:#cd2024;
+    font-size:1.2rem;
 }
   
 /* Number text (1/3 etc) */
@@ -470,8 +506,19 @@ html{
     position: absolute;
     top: 0;
 }
-  
-  /* The dots/bullets/indicators */
+.text{
+    display:none;
+}
+.text-1{
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    left:80px;
+    bottom: 1px;
+    text-align: center;
+}
+/* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
     height: 15px;
@@ -755,6 +802,7 @@ html{
     font-size:2.1rem;
 }
 
+
 /* carousel ?? */
 
 
@@ -864,7 +912,7 @@ html{
         height:50px;
         color:white;
         margin-left:50px;
-        margin-top:30px;
+        margin-top:5px;
         text-decoration:none;
         justify-content:center;
         border-radius:10px;
@@ -875,15 +923,41 @@ html{
         background:white;
         color:black;
     }
+    .nav-call{
+        font-family:'Oswald', sans-serif;
+        margin-top:5px;
+        font-size:1rem;
+        width:100%;
+        color:white;
+        background-color:black;
+        text-decoration:none;
+        text-align:center;
+        transition: all 0.3s ease;
+    }
+    .nav-call:hover{
+        background-color:rgba(0, 0, 0, 0);
+        color:#cd2024;
+    }
+    .nav-contact i{
+        margin-right:10px;
+    }
+    .nav-contact{
+        display:flex;
+        width:200px;
+        flex-direction:column;
+    }
 
     .scroll-top{
-        color:white;
+        background:none;
+        color:#cd2024;
         position:fixed;
+        display:none;
         width:50px;
         height:50px;
         right:50px;
         bottom:50px;
         opacity:0.6;
+        z-index:9999;
     }
     
     .scroll-top:hover{
@@ -968,7 +1042,7 @@ html{
         background-repeat:none;
         background-position:top;
         padding-top:20px;
-        max-width:1200px;
+        max-width:1000px;
         margin-top:-80px;
         text-align:justify;
     }
@@ -1099,6 +1173,48 @@ html{
         align-items:center;
         transition: all 0.3s ease;
     }
+    .carousel-container{
+        top:250px;
+        margin-left:150px;
+        width:700px;
+        font-size:3rem;
+    }
+    .boldNum{
+        font-size:3.5rem;
+    }
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        display:block;
+        left:420px;
+        bottom: 320px;
+        text-align: center;
+    }
+    .text-1{
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        left:300px;
+        bottom: 320px;
+        text-align: center;
+    }
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding:24px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
 
 }
 /* changes the footer size */
@@ -1108,10 +1224,38 @@ html{
         width:50%;
         margin-bottom:30px;
     }
+
+    .scroll-top{
+        background:none;    
+        border:none;
+        color:#cd2024;
+        position:fixed;
+        display:none;
+        width:50px;
+        height:50px;
+        right:30px;
+        bottom:30px;
+        opacity:0.6;
+        z-index:9999;
+    }
 }
 @media(max-width:574px){
     .footer-col{
         width:100%;
+    }
+
+    .scroll-top{
+        background:none;    
+        border:none;
+        color:#cd2024;
+        position:fixed;
+        display:none;
+        width:50px;
+        height:50px;
+        right:30px;
+        bottom:30px;
+        opacity:0.6;
+        z-index:9999;
     }
 }
 
