@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href=bram-miss.css>
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <script src="location.js"></script>
     <title>Perplexity Escape Games</title>
 </head>
 
@@ -34,7 +35,10 @@
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
         </nav>
-        <a href="https://bookeo.com/perplexityescapegames" alt="Book Rooms" class="nav-booking">BOOK NOW</a>
+        <div class="nav-contact">
+            <a href="tel:905-595-8583" class="nav-call"><i class="fas fa-mobile-alt"></i>905-595-8583</a>
+            <a href="https://bookeo.com/perplexityescapegames" alt="Book Rooms" class="nav-booking">BOOK NOW</a>
+        </div>
         <label for="nav-toggle" class="nav-toggle-label">
             <span></span>
         </label>
@@ -136,7 +140,7 @@
         </div>
     </div>
     
-    <a href="#" class="scroll-top"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+    <button class="scroll-top" id="scrollBtn" onclick="topFunction()"><i class="fas fa-arrow-circle-up fa-3x"></i></button>
 
     <footer class="footer">
         <div class="container">
