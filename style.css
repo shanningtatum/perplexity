@@ -569,6 +569,7 @@ html{
 }
   
 .body-con{
+    padding-top:150px;
     margin-bottom:100px;
 }
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -998,11 +999,7 @@ html{
         margin-left:auto;
         margin-right:auto;
     }
-    .div-bar {
-        box-sizing:border-box;
-        background:rgba(169, 31, 34, 1);
-        max-width: 100%;
-    }
+
     .content{
         background-repeat:none;
         font-family:'Arial', sans-serif;
