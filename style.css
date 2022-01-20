@@ -26,7 +26,6 @@ body{
 
 .content{
     min-height:100vh;
-    padding-top:150px;
     background-image:url(images/content.png);
     background-attachment:fixed;
     background-repeat:no-repeat;
@@ -137,8 +136,6 @@ nav a:hover{
 .room-toggle{
     display:none;
 }
-
-
 .room-toggle:checked ~ .rooms-links{
     display:block;
     transform:scale(1,1);
@@ -290,6 +287,7 @@ nav a:hover{
 }
 
 .room-content{
+    padding-top:150px;
     padding-left:50px;
     padding-right:50px;
     margin-left:auto;
@@ -402,6 +400,7 @@ nav a:hover{
     background:none;    
     border:none;
     color:#cd2024;
+    cursor:pointer;
     position:fixed;
     display:none;
     width:50px;
@@ -425,7 +424,7 @@ html{
     margin: auto;
 }
   
-  /* Hide the images by default */
+/* Hide the images by default */
 .mySlides {
     display: none;
 }
@@ -604,28 +603,20 @@ html{
 }
 
 /* landing page style */
+.block{
+    width:100%;
+    font-family:'Roboto', sans-serif;
+    background-color:white;
+}
+.block1{
+    background-color:whitesmoke;
+}
 
 .div-bar {
     box-sizing:border-box;
     background:rgba(169, 31, 34, 1);
-    margin-top:-150px;
-    height:70px;
+    padding:20px;
     max-width: 100%;
-}
-
-.about-what{
-    background-image:url(images/About.png);
-    background-size:cover;
-    background-position:center;
-    background-repeat:repeat-y;
-    padding-top:10px;
-    box-sizing:border-box;
-    padding-bottom:50px;
-    max-width:100%;
-    padding-left:20px;
-    padding-right:20px;
-    margin-left:auto;
-    margin-right:auto;
 }
 
 .para{
@@ -634,20 +625,19 @@ html{
     text-align:justify;
 }
 .title{
+    padding-top:0px;
+    margin-top:0px;
     color:#222;
     box-sizing:border-box;
     text-align:center;
     font-family:'Bebas Neue',sans-serif;
     font-size:2.5rem;
-    margin-top:10px;
     margin-left:auto;
 }
 .lines{
-    margin-top:40px;
     margin-left:auto;
     margin-right:auto;
     width:300px;
-    height:45px;
     position:relative;
     text-align:center;
 }
@@ -656,7 +646,7 @@ html{
     position:absolute;
     margin:auto;
     height:2px;
-    background:#222;
+    background:white;
     width:45%;
     top:30%;
 }
@@ -667,10 +657,35 @@ html{
     right:0
 }
 #br-icon{
-    left:0;
-    right:0;
-    bottom:0;
+    color:white;
+}
+/* landing page content fix this shit */ 
+.block{
+    text-align:justify;
+}
+.section{
+    width:100%;
+    padding:0 20px;
+}
+.image1{
+    text-align:center;
+}
+.image1 img{
+    width:50%;
+}
+.second-section{
+    padding:20px;
+    width:100%;
+}
+.image2{
+    display:none;
+}
+.third-section{
+    padding:20px;
+}
 
+.home-corp2, .home-corp{
+    width:100%;
 }
 
 .tax{
@@ -742,44 +757,7 @@ html{
     margin-left:auto;
 }
 .home{
-    width:300px;
-}
-.home-corp{
-    width:300px;
-}
-.home-corp2{
-    text-align:center;
-    width:300px;
-}
-.corp-container{
-    display:flex;
-    flex-direction:column;
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
-}
-.corp-column{
     width:100%;
-    flex:1; 
-    flex-direction:column;
-}
-.para1{
-    padding-bottom:10px;
-    list-style-type:none;
-    align-items:center;
-    margin-left:auto;
-    margin-right:auto;
-    display:flex;
-    flex-direction:column;
-}
-.para2{
-    padding:0px;
-    list-style-type:none;
-    align-items:center;
-    margin-left:auto;
-    margin-right:auto;
-    display:flex;
-    flex-direction:column;
 }
 .para3{
     font-family:'Bebas Neue', sans-serif;
@@ -802,20 +780,15 @@ html{
     font-size:2.1rem;
 }
 
-
-/* carousel ?? */
-
-
-@media screen and (min-width:800px){
+/* this is the web page */
+@media(min-width:1000px){
     .nav-toggle-label{
         display:none;
     }
-
     header{
         display:grid;
         grid-template-columns:1fr auto minmax(600px,3fr) 1fr;
     }
-
     .active-page{
         background:#a91f22;
         color:black;
@@ -946,7 +919,10 @@ html{
         width:200px;
         flex-direction:column;
     }
-
+    .title{
+        padding-top:0px;
+        margin-top:0px;
+    }
     .scroll-top{
         background:none;
         color:#cd2024;
@@ -1025,12 +1001,9 @@ html{
     .div-bar {
         box-sizing:border-box;
         background:rgba(169, 31, 34, 1);
-        margin-top:-150px;
-        height:70px;
         max-width: 100%;
     }
     .content{
-        min-height:100vh;
         background-repeat:none;
         font-family:'Arial', sans-serif;
         display:grid;
@@ -1038,23 +1011,53 @@ html{
 
     /* landing page styling */
 
-    .about-what{
-        background-repeat:none;
-        background-position:top;
-        padding-top:20px;
-        max-width:1000px;
-        margin-top:-80px;
-        text-align:justify;
-    }
-    .what{
+    .first-section{
+        background-color:whitesmoke;
+        font-family:'Roboto', sans-serif;
+        padding:20px;
         margin-left:auto;
         margin-right:auto;
-        max-width:1000px;
+        width:75%;
+        text-align:justify;
     }
-    .para{
-        padding-bottom:0px;
-        padding-left:60px;
-        padding-right:60px;
+    .first-section p{
+        margin:auto;
+        width: 75%;
+    }
+    .second-section{
+        padding:20px;
+        width:100%;
+    }
+    .image2 {
+        display:block;
+        width:25%;
+        right:0px;
+        position:absolute;
+    }
+    .image2 img{
+        width:100%;
+    }
+    .fourth-section{
+        width:60%;
+        padding:20px;
+        text-align:justify;
+    }
+    .image1 img{
+        width:100%;
+    }
+    .corp-column{
+        width:20%;
+    }
+    .home-corp{
+        width:100%;
+    }
+    .home-corp2{
+        width:100%;
+    }
+    .block{
+        width:100%;
+        text-align:justify;
+        background:white;
     }
     .a-para p{
         box-sizing:border-box;
@@ -1095,9 +1098,6 @@ html{
         transition: all 0.3s ease;
         transform:scale(0.9);
     }
-    .title{
-        margin-top:10px;
-    }
     .lines{
         width:500px;
     }
@@ -1115,35 +1115,26 @@ html{
     }
     .block1{
         width:100%;
-    }
-    .para1{
-        padding-bottom:0px;
-        flex-direction:row;
-        align-items:center;
-    }
-    .para2{
-        padding-bottom:0px;
-        align-items:flex-start;
-        flex-direction:row;
-    }
-    .home-corp{
-        width:400px;
-    }
-    .home-corp2{
-        width:425px;
-        background:red;
-        margin-right:100px;
-    }
-    .corp-container{
+        background-color:whitesmoke;
         display:flex;
         flex-direction:row;
     }
-    .corp-column{
-        width: 50%;
-        flex:1;
+    .block2{
+        width:100%;
+        background-color:whitesmoke;
+        display:flex;
+        flex-direction:row;
     }
-    .corp-column:first-child{
-        margin-left:70px;
+
+    .block3{
+        width:100%;
+        background-color:whitesmoke;
+    }
+    .block4{
+        width:100%;
+        background-color:whitesmoke;
+        display:flex;
+        flex-direction:row;
     }
     .para4{
         padding-left:80px;
@@ -1189,7 +1180,6 @@ html{
         position: absolute;
         display:block;
         left:420px;
-        bottom: 320px;
         text-align: center;
     }
     .text-1{
@@ -1215,16 +1205,13 @@ html{
         border-radius: 0 3px 3px 0;
         user-select: none;
     }
-
-}
-/* changes the footer size */
-
-@media(max-width:767px){
     .footer-col{
-        width:50%;
+        width:25%;
         margin-bottom:30px;
     }
-
+    .footer{
+        width:100%;
+    }
     .scroll-top{
         background:none;    
         border:none;
@@ -1239,11 +1226,29 @@ html{
         z-index:9999;
     }
 }
+
 @media(max-width:574px){
+
     .footer-col{
         width:100%;
     }
-
+    .slideshow-container {
+        padding-top:150px;
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+    }
+    .block{
+        padding:20px 0px;
+        margin:0px;
+        background:white;
+    }
+    .image1{
+        text-align:center;
+    }
+    .image1 img{
+        width:50%;
+    }
     .scroll-top{
         background:none;    
         border:none;
@@ -1306,6 +1311,7 @@ html{
     position:relative;
     display:flex;
     box-sizing:border-box;
+    cursor:pointer;
     width:20px;
     height:20px;
     align-items:left;

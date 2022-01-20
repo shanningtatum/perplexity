@@ -174,7 +174,7 @@ nav a:hover{
     font-size:3rem;
     text-align:center;
     color:#222;
-    margin-top:20px;
+    margin-top:0px;
     font-family:'Bebas Neue', sans-serif;
     transition: all 0.3s ease;
 }
@@ -242,6 +242,7 @@ nav a:hover{
 .scroll-top{
     color:black;
     position:fixed;
+    cursor:pointer;
     width:50px;
     height:50px;
     right:30px;
@@ -376,6 +377,58 @@ html{
     color:white;
 }
 
+.nav-contact{
+    display:flex;
+    flex-direction:row;
+}
+.nav-booking{
+    font-family:'Bebas Neue', sans-serif;
+    background-color:green;
+    color:white;
+    display:flex;
+    font-size:1.5rem;
+    width:50%;
+    margin:0px;
+    top:0;
+    text-decoration:none;
+    justify-content:center;
+    align-items:center;
+    transition: all 0.3s ease;
+}
+.nav-call{
+    font-family:'Bebas Neue', sans-serif;
+    background-color:green;
+    color:white;
+    display:flex;
+    font-size:1.5rem;
+    width:50%;
+    margin:0px;
+    top:0;
+    text-decoration:none;
+    justify-content:center;
+    align-items:center;
+    transition: all 0.3s ease;
+}
+.nav-contact i{
+    margin-right:10px;
+}
+.nav-booking:hover, .nav-call:hover{
+    background-color:rgb(10, 87, 10);
+}
+.scroll-top{
+    background:none;    
+    border:none;
+    color:#cd2024;
+    position:fixed;
+    display:none;
+    width:50px;
+    height:50px;
+    right:30px;
+    bottom:30px;
+    opacity:0.6;
+    z-index:9999;
+}
+
 .lines{
     margin-top:50px;
     margin-left:auto;
@@ -404,7 +457,6 @@ html{
     left:0;
     right:0;
     bottom:0;
-
 }
 .closed{
     color:#cd2024;
@@ -413,12 +465,11 @@ html{
 /* events styling start */ 
 
 .events-content{
+    padding:20px;
     background-image:url(images/About.png);
     background-size:cover;
     box-sizing:border-box;
-    height:200vh;
-    padding-left:60px;
-    padding-right:60px;
+    height:100%;
     text-align:justify;
     background-color:white;
     margin-left:auto;
@@ -577,17 +628,19 @@ html{
         width:200px;
         flex-direction:column;
     }
-
     .scroll-top{
-        color:white;
+        background:none;
+        color:#cd2024;
         position:fixed;
+        display:none;
         width:50px;
         height:50px;
         right:50px;
         bottom:50px;
         opacity:0.6;
+        z-index:9999;
     }
-    
+
     .scroll-top:hover{
         opacity:1;
     }

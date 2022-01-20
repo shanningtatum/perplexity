@@ -1,4 +1,5 @@
 //Get the button:
+const info = document.querySelector('.info');
 
 console.log("Hello");
 
@@ -20,4 +21,17 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+function renderRoom(){
+  roomInfo.forEach((rooms) => {
+    info.innerHTML += `<i class="fas fa-users fa-2x" id="icons"></i>
+    <div class="players">${players}</div>
+    <i class="fas fa-hourglass-half fa-2x" id="icons"></i>
+    <div class="time">${time} minutes</div>
+    <i class="fas fa-unlock fa-2x" id="icons"></i>
+    <div class="pass">${passrate}% pass rate</div>
+    <i class="fas fa-dollar-sign fa-2x" id="icons"></i>
+    <div class="rate">${rate} per player</div>`
+  })
 }

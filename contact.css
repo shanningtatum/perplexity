@@ -245,6 +245,7 @@ nav a:hover{
     background:none;    
     border:none;
     color:#cd2024;
+    cursor:pointer;
     position:fixed;
     display:none;
     width:50px;
@@ -427,6 +428,7 @@ html{
 .closed{
     color:#cd2024;
 }
+
 
 /* contacts styling start */ 
 

@@ -242,6 +242,7 @@ nav a:hover{
 .scroll-top{
     color:black;
     position:fixed;
+    cursor:pointer;
     width:50px;
     height:50px;
     right:30px;

@@ -262,6 +262,7 @@ nav a:hover{
     background-color:rgb(10, 87, 10);
 }
 .scroll-top{
+    cursor:pointer;
     color:#cd2024;
     position:fixed;
     background:none;    
@@ -502,6 +503,7 @@ html{
     margin-right:auto;
     color:white;
     text-transform:uppercase;
+    justify-content:space-between;
     text-align:center;
     display:flex;
     flex-direction:column;
@@ -908,6 +910,7 @@ html{
         flex-direction:row;
         text-align:center;
         align-items:center;
+        justify-content:space-between;
     }
     .info-col{
         flex-direction:row;
